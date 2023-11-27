@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { useDentistaStates } from '../Context/DentistaContext';
 
 
-
 const Navbar = () => {
   const changeTheme = () => {
     dispatch({ type: 'DARK_MODE', payload: !state.darkTheme});

@@ -10,14 +10,15 @@ const Favs = () => {
     dispatch({ type: 'DELETE_FAVS', payload: [] });
   }
 return (
-  <div>
+  <div className='container'>
       <h2>Lista de Favoritos</h2>
+    <div className='cardsContainer'>
       {state.favs.map(users => (
           <div key={users.id}>
               <Card key={users.id} users={users}/>
           </div>
-      ))}
-      <button onClick={clearFavorites}>Limpiar Favoritos</button>
+      ))}</div>
+      <button className="favsBtn"onClick={clearFavorites}>Limpiar Favoritos</button>
   </div>
 );
 };

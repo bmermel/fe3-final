@@ -6,16 +6,23 @@ import { useDentistaStates} from '../Context/DentistaContext'
 const Card = ({users}) => {
 
   const addToFavorites = () => {
-    dispatch({ type: 'ADD_FAV', payload: users });
-    alert("Se ha añadido un favorito.")
+    if(!isInFavs(users.id)){
+      dispatch({ type: 'ADD_FAV', payload: users });
+      alert("Se ha añadido un favorito.")
+    }
 };
-  const {dispatch} = useDentistaStates()
+
+  const isInFavs = (id) => state.favs.some(fav => fav.id == id)
+  
+
+  const {dispatch, state} = useDentistaStates()
   return (
     <div className= "card">
       <Link to={'/dentist/' + users.id}>
           <h3>{users.name}</h3> 
       </Link>
-      <button onClick={(addToFavorites)}>⭐</button>
+      {isInFavs(users.id) ? <span>en favoritos</span> : <button onClick={(addToFavorites)}>⭐</button>
+}
     </div>
   )
 }

@@ -8,12 +8,14 @@ import DentistaDetail from './Pages/DentistaDetail'
 import './Styles/App.css'
 import './Styles/Styles.css'
 import Favs from './Pages/Favs'
+import { useDentistaStates } from './Context/DentistaContext'
+import Footer from './Components/Footer'
 
 function App() {
+  const {state} = useDentistaStates()
   
-
   return (  
-    <>
+    <div id={state.darkTheme ? 'dark' : ''}>
     <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
@@ -22,7 +24,8 @@ function App() {
         <Route path='/dentist/:id' element={<DentistaDetail />} />
         <Route path='*' element={<PageNotFound/>}/>
       </Routes>
-    </>
+      <Footer/>
+    </div>
   )
 }
 

@@ -15,7 +15,8 @@ const DentistaDetail = () => {
     }, [])
 
   return (
-    <div className='list'>
+    
+    <div className='container list'>
         <h3>{users.name}</h3>
         <h3>{users.email}</h3>
         <h3>{users.phone}</h3>

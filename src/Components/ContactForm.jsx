@@ -34,9 +34,9 @@ const ContactForm = () => {
   };
 
   return (
-    <div>
-      <h2>Formulario de Contacto</h2>
+    <div className='container form'>
       <form onSubmit={handleSubmit}>
+      <h2>Formulario de Contacto</h2>
         <div>
           <label htmlFor="nombre">Nombre Completo:</label>
           <input
@@ -57,7 +57,7 @@ const ContactForm = () => {
             onChange={handleChange}
           />
         </div>
-        <button type="submit">Enviar</button>
+        <button className="favsBtn" type="submit">Enviar</button>
       </form>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {exito && <p style={{ color: 'green' }}>{exito}</p>}

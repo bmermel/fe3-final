@@ -14,25 +14,16 @@
   background-color: cadetblue;
 }
 
+#dark .navbar{
+  background-color: rgb(24, 35, 46);
+}
+
 .home{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 } 
-
-.card {
-  width: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color:#f5f5dc;
-  border: solid 2px #d8d8c1;
-  border-radius: 10px;
-  margin: 20px;
-  padding: 20px;
-}
 
 .form > h5 {
   display: none;

@@ -2,8 +2,9 @@
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
+    
   
-    color-scheme: light;
+    /*color-scheme: light;
     color: rgba(0, 0, 0, 0.87);
     background-color: #ffffff;
   
@@ -11,35 +12,55 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;*/
   }
-  
+
+  /* ACA COMIENZAN LOS ESTILOS DE HOME*/
+
+  .home{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }  
+  .cardsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
   a {
     font-weight: 500;
     color: #000000;
     text-decoration: inherit;
+    &&:hover{
+      color: #535bf2;
+
+    }
   }
-  
-  a:hover {
-    color: #535bf2;
+    
+  #dark a:hover {
+    color: #af5205;
   }
   
   body {
+    overflow-x: hidden;
     margin: 0;
-    display: flex;
-    place-items: center;
-    min-width: 320px;
-    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
     transition: background-color 0.5s, color 0.5s; /* Agregado para la transición suave */
   }
 
-  .dark-theme{
+  body #dark {
     background-color: #000000;
-    color: white;
-    }
-  .dark-theme a{
+   }
+
+  #dark a{
       color: white;
       }
+
   h1 {
     font-size: 3.2em;
     line-height: 1.1;
@@ -52,22 +73,31 @@
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
-    background-color: darkslategrey;
-    color: white;
+    background-color: red;
+    color:  white;
     cursor: pointer;
-    transition: border-color 0.25s, background-color 0.5s, color 0.5s; /* Agregado para transiciones suaves */
+    transition: border-color 0.25s, background-color 0.5s, color 0.5s;
   }
+
+  #dark button {
+    background-color: darkslategrey;
+    }
   
   button:hover {
     border-color: #646cff;
   }
-  
+ 
   button:focus,
   button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
   }
+
+  .favsBtn{
+  margin-top: 20px;
+  }
+
+  
   .card {
-    width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,22 +105,69 @@
     background-color:#f5f5dc;
     border: solid 2px #d8d8c1;
     border-radius: 10px;
-    margin: 20px;
-    padding: 20px;
+    padding: 40px;
+   
   }
-  /* Modo Oscuro */
-  @media (prefers-color-scheme: dark) {
-    :root {
-      color: #d3d3d3;
-      background-color: #121212;
-    }
   
-    a:hover {
-      color: #747bff;
-    }
-  
-    button {
-      background-color: #333;
-      color: #fff;
-    }
-  }
+  #dark .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color:#503655;
+  border: solid 2px #d8d8c1;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.navbar{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+  background-color: cadetblue;
+}
+
+#dark .navbar{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+  background-color: rgb(24, 35, 46);
+}
+.form > h5 {
+  display: none;
+}
+.form > input {
+  margin: 10px;
+  height: 30px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.form{
+  display: grid;
+  place-items: center;
+}
+
+.container{
+  height: 80vh;
+}
+
+#dark .container{
+  color: white;
+}
+
+#dark .footer{
+  height: 10vh;
+  color: white;  
+}
+
+.container h2, h3{
+  margin: 0;
+
+}
