@@ -1,0 +1,45 @@
+#root {
+
+  height: 100vh;
+  text-align: center;
+}
+
+.navbar{
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  background-color: cadetblue;
+}
+
+.home{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} 
+
+.card {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color:#f5f5dc;
+  border: solid 2px #d8d8c1;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.form > h5 {
+  display: none;
+}
+.form > input {
+  margin: 10px;
+  height: 30px;
+  border-radius: 10px;
+  padding: 5px;
+}
