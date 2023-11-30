@@ -15,7 +15,7 @@ function App() {
   const {state} = useDentistaStates()
   
   return (  
-    <div id={state.darkTheme ? 'dark' : ''}>
+    <div id={state.darkTheme ? 'dark' : 'light'}>
     <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}/>

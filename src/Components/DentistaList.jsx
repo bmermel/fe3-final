@@ -9,7 +9,9 @@ const DentistaList = () => {
   const {state} = useDentistaStates()
   console.log(state);
   return (
+    
     <div className="cardsContainer">
+      
         {state.dentistaList.map(users => <Card key={users.id} users={users}/>)}
     </div>
   )
